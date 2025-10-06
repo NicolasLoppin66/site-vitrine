@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mon Site Vitrine</title>
+    <title>Mon Site Vitrine - Solutions Digitales Innovantes</title>
+    <meta
+      name="description"
+      content="Agence de développement web créant des sites vitrines modernes, applications web et solutions digitales sur mesure."
+    />
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/utils/variables.css" />
@@ -19,16 +23,23 @@
       <nav class="nav">
         <div class="nav-brand">
           <img src="images/logo.png" alt="Logo" class="logo" />
+          <a href="#accueil" class="site-name">DigitalSolution</a>
         </div>
         <ul class="nav-menu" id="navMenu">
           <li class="nav-item">
-            <a href="#accueil" class="nav-link">Accueil</a>
+            <a href="#accueil" class="nav-link active">Accueil</a>
           </li>
           <li class="nav-item">
             <a href="#services" class="nav-link">Services</a>
           </li>
           <li class="nav-item">
-            <a href="#portfolio" class="nav-link">Portfolio</a>
+            <a href="#portfolio" class="nav-link">Réalisations</a>
+          </li>
+          <li class="nav-item">
+            <a href="#equipe" class="nav-link">Équipe</a>
+          </li>
+          <li class="nav-item">
+            <a href="#temoignages" class="nav-link">Témoignages</a>
           </li>
           <li class="nav-item">
             <a href="#contact" class="nav-link">Contact</a>
@@ -43,15 +54,39 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="accueil">
+    <section class="hero hero-gradient" id="accueil">
       <div class="hero-content">
-        <h1 class="hero-title" data-aos="fade-up">Bienvenue sur notre site</h1>
+        <h1 class="hero-title" data-aos="fade-up">
+          Solutions Digitales <span class="gradient-text">Innovantes</span>
+        </h1>
         <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
-          Nous créons des solutions digitales innovantes
+          Nous transformons vos idées en expériences digitales exceptionnelles
         </p>
-        <button class="cta-button" data-aos="fade-up" data-aos-delay="400">
-          Découvrir nos services
-        </button>
+        <p class="hero-text" data-aos="fade-up" data-aos-delay="300">
+          Développement web sur mesure, design UX/UI et stratégie digitale pour
+          propulser votre business vers le succès.
+        </p>
+        <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+          <button class="cta-button">Découvrir nos services</button>
+          <button class="cta-button secondary">Voir nos réalisations</button>
+        </div>
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Projets réalisés</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">Clients satisfaits</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Ans d'expérience</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <div class="scroll-indicator"></div>
       </div>
     </section>
 
@@ -59,8 +94,67 @@
     <section class="services" id="services">
       <div class="container">
         <h2 class="section-title">Nos Services</h2>
+        <p class="section-subtitle" data-aos="fade-up">
+          Des solutions complètes pour votre présence digitale
+        </p>
         <div class="services-grid" id="servicesGrid">
           <!-- Les services seront générés par JavaScript -->
+          <div class="loading-spinner"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="section-title">Nos Réalisations</h2>
+        <p class="section-subtitle" data-aos="fade-up">
+          Découvrez nos projets les plus marquants
+        </p>
+
+        <!-- Filtres Portfolio -->
+        <div class="portfolio-filters" data-aos="fade-up">
+          <button class="filter-btn active" data-filter="all">Tous</button>
+          <button class="filter-btn" data-filter="Développement">
+            Développement
+          </button>
+          <button class="filter-btn" data-filter="Design">Design</button>
+          <button class="filter-btn" data-filter="E-commerce">
+            E-commerce
+          </button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+          <!-- Le portfolio sera généré par JavaScript -->
+          <div class="loading-spinner"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team" id="equipe">
+      <div class="container">
+        <h2 class="section-title">Notre Équipe</h2>
+        <p class="section-subtitle" data-aos="fade-up">
+          Des experts passionnés à votre service
+        </p>
+        <div class="team-grid" id="teamGrid">
+          <!-- L'équipe sera générée par JavaScript -->
+          <div class="loading-spinner"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="temoignages">
+      <div class="container">
+        <h2 class="section-title">Ils nous font confiance</h2>
+        <p class="section-subtitle" data-aos="fade-up">
+          Ce que disent nos clients
+        </p>
+        <div class="testimonials-grid" id="testimonialsGrid">
+          <!-- Les témoignages seront générés par JavaScript -->
+          <div class="loading-spinner"></div>
         </div>
       </div>
     </section>
@@ -68,54 +162,197 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
       <div class="container">
-        <h2 class="section-title">Contactez-nous</h2>
-        <form class="contact-form" id="contactForm">
-          <div class="form-group">
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              class="form-input"
-              placeholder="Votre nom"
-            />
+        <div class="contact-content">
+          <div class="contact-info" data-aos="fade-right">
+            <h2 class="section-title">Contactez-nous</h2>
+            <p class="contact-description">
+              Prêt à démarrer votre projet ? Discutons de vos idées et voyons
+              comment nous pouvons vous aider à les concrétiser.
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div class="contact-text">
+                  <h3>Email</h3>
+                  <p>contact@digitalsolution.com</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-text">
+                  <h3>Téléphone</h3>
+                  <p>+33 1 23 45 67 89</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-text">
+                  <h3>Adresse</h3>
+                  <p>123 Avenue de la République<br />75011 Paris, France</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+              <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+              <a href="#" class="social-link" aria-label="GitHub">💻</a>
+              <a href="#" class="social-link" aria-label="Instagram">📸</a>
+            </div>
           </div>
-          <div class="form-group">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              class="form-input"
-              placeholder="Votre email"
-            />
+
+          <div class="contact-form-container" data-aos="fade-left">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="form-input"
+                  placeholder="Votre nom complet"
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="form-input"
+                  placeholder="Votre adresse email"
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-input"
+                  placeholder="Votre téléphone (optionnel)"
+                />
+              </div>
+
+              <div class="form-group">
+                <select id="service" name="service" class="form-input">
+                  <option value="">Type de service recherché</option>
+                  <option value="developpement">Développement Web</option>
+                  <option value="design">Design UX/UI</option>
+                  <option value="seo">SEO & Marketing</option>
+                  <option value="consulting">Consulting</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  class="form-textarea"
+                  placeholder="Décrivez votre projet..."
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="newsletter" checked />
+                  <span class="checkmark"></span>
+                  Je souhaite recevoir la newsletter et les actualités
+                </label>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                <span class="btn-text">Envoyer le message</span>
+                <div class="loading-spinner"></div>
+              </button>
+            </form>
           </div>
-          <div class="form-group">
-            <textarea
-              id="message"
-              name="message"
-              required
-              class="form-textarea"
-              placeholder="Votre message"
-            ></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Envoyer</button>
-        </form>
+        </div>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <p>&copy; 2024 Mon Site Vitrine. Tous droits réservés.</p>
+      <div class="footer-main">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="images/logo.png" alt="Logo" class="footer-logo" />
+            <p class="footer-description">
+              Nous créons des solutions digitales innovantes qui transforment
+              votre vision en réalité.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+              <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+              <a href="#" class="social-link" aria-label="GitHub">💻</a>
+              <a href="#" class="social-link" aria-label="Instagram">📸</a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3 class="footer-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="#services">Développement Web</a></li>
+              <li><a href="#services">Design UX/UI</a></li>
+              <li><a href="#services">SEO & Marketing</a></li>
+              <li><a href="#services">Applications Mobile</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h3 class="footer-title">Entreprise</h3>
+            <ul class="footer-links">
+              <li><a href="#equipe">Notre équipe</a></li>
+              <li><a href="#portfolio">Réalisations</a></li>
+              <li><a href="#temoignages">Témoignages</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-newsletter">
+            <h3 class="footer-title">Newsletter</h3>
+            <p>Inscrivez-vous pour recevoir nos actualités et conseils.</p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input
+                type="email"
+                class="newsletter-input"
+                placeholder="Votre email"
+                required
+              />
+              <button type="submit" class="newsletter-button">
+                S'inscrire
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p class="footer-copyright">
+            &copy; 2024 DigitalSolution. Tous droits réservés.
+          </p>
+          <ul class="footer-legal">
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
       </div>
     </footer>
+
     <!-- JavaScript -->
-    <script src="js/utils/helpers.js"></script>
-    <script src="js/utils/api.js"></script>
-    <script src="js/modules/navigation.js"></script>
-    <script src="js/modules/animations.js"></script>
-    <script src="js/modules/form.js"></script>
-    <script src="js/app.js"></script>
+    <script type="module" src="js/utils/helpers.js"></script>
+    <script type="module" src="js/data/content.js"></script>
+    <script type="module" src="js/modules/navigation.js"></script>
+    <script type="module" src="js/modules/animations.js"></script>
+    <script type="module" src="js/modules/form.js"></script>
+    <script type="module" src="js/modules/contentManager.js"></script>
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>
